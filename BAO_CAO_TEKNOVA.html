@@ -378,6 +378,147 @@
           </div>
         </div>
       </div>
+    
+      <!-- ĐỀ XUẤT ĐỘT PHÁ CHO HERO SECTION: INTERACTIVE DOMAIN SWITCHER -->
+      <div class="mt-6 p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-md border border-slate-700">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-700/80">
+          <div>
+            <span class="text-[10px] font-bold tracking-widest uppercase text-sky-400 bg-sky-950/80 px-2.5 py-0.5 rounded-full border border-sky-800/60">
+              💡 ĐỀ XUẤT NÂNG CẤP HERO SECTION
+            </span>
+            <h3 class="text-base sm:text-lg font-bold text-white mt-1.5 mb-0">
+              Interactive Domain Switcher (Bảng Chuyển Đổi 3 Lĩnh Vực Đa Ngành)
+            </h3>
+          </div>
+          <span class="text-[11px] text-slate-300 bg-slate-800 px-3 py-1 rounded-lg border border-slate-700">
+            Giải quyết triệt để vấn đề "Bảng demo AI vẽ giả định"
+          </span>
+        </div>
+
+        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+          Vì Teknova triển khai nhiều mảng (Y tế, Chính quyền số, Viễn thông & Doanh nghiệp), nếu Hero chỉ gắn cứng 1 bảng EMR y tế do AI vẽ thì khách hàng thuộc khối Cơ quan/Doanh nghiệp mở ra sẽ thấy không liên quan, còn Giám đốc Bệnh viện nhìn vào sẽ biết ngay là bảng vẽ tĩnh. Đề xuất Dev xây dựng <strong>Hero có 3 Tab chuyển đổi tương tác</strong>:
+        </p>
+
+        <!-- 3 TAB BUTTONS -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-4" id="hero-demo-tabs">
+          <button type="button" onclick="switchHeroTab('tab-yte')" id="btn-tab-yte" class="flex items-center gap-2 p-2.5 rounded-xl border border-sky-500 bg-sky-600/30 text-white font-bold text-xs text-left transition">
+            <span class="text-base">🏥</span>
+            <div>
+              <div class="text-sky-300 font-bold">1. Y Tế Số & EMR</div>
+              <div class="text-[10px] text-slate-300 font-normal">Bệnh viện & TTYT</div>
+            </div>
+          </button>
+
+          <button type="button" onclick="switchHeroTab('tab-chinhquyen')" id="btn-tab-chinhquyen" class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-slate-400 hover:text-white font-medium text-xs text-left transition">
+            <span class="text-base">🏛️</span>
+            <div>
+              <div class="text-slate-200 font-bold">2. Chính Quyền Số</div>
+              <div class="text-[10px] text-slate-400 font-normal">Đề án 06 & CSDL Dân số</div>
+            </div>
+          </button>
+
+          <button type="button" onclick="switchHeroTab('tab-doanhnghiep')" id="btn-tab-doanhnghiep" class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-slate-400 hover:text-white font-medium text-xs text-left transition">
+            <span class="text-base">🏢</span>
+            <div>
+              <div class="text-slate-200 font-bold">3. Doanh Nghiệp & B2B</div>
+              <div class="text-[10px] text-slate-400 font-normal">Cloud Premier & Ngân hàng</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- TAB CONTENT 1: Y TẾ SỐ -->
+        <div id="content-tab-yte" class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between text-xs pb-2 border-b border-slate-800">
+            <span class="font-bold text-sky-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-sky-500"></span> Hệ Sinh Thái Y Tế Số & Bệnh Án Điện Tử EMR
+            </span>
+            <span class="text-[10px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800">
+              ✓ TT 46/2018 · TT 26/2025 · QĐ 3176
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-[11.5px]">
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• Bệnh án điện tử EMR</strong>
+              <p class="text-slate-400 mb-0">Bỏ bệnh án giấy, 42 bác sĩ ký số Cloud CA & đóng dấu thời gian TSA.</p>
+              <span class="text-[10px] text-sky-400 font-medium block mt-1">Triển khai: BV Phổi Đà Nẵng</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• Đơn thuốc điện tử Quốc gia</strong>
+              <p class="text-slate-400 mb-0">Đồng bộ liên thông donthuocquocgia.vn &lt; 0.8s theo TT 26/2025.</p>
+              <span class="text-[10px] text-sky-400 font-medium block mt-1">Triển khai: TTYT Liên Chiểu</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• Giám định BHYT & Kiosk CCCD</strong>
+              <p class="text-slate-400 mb-0">Trích xuất XML QĐ 3176/QĐ-BYT, kiosk tiếp đón tích hợp CCCD chip.</p>
+              <span class="text-[10px] text-sky-400 font-medium block mt-1">Triển khai: TTYT Cẩm Lệ, Ngũ Hành Sơn</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT 2: CHÍNH QUYỀN SỐ -->
+        <div id="content-tab-chinhquyen" class="hidden p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between text-xs pb-2 border-b border-slate-800">
+            <span class="font-bold text-indigo-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Nền Tảng Dữ Liệu Dân Cư & Dịch Vụ Công Cấp Cơ Sở
+            </span>
+            <span class="text-[10px] text-indigo-300 font-mono bg-indigo-950/60 px-2 py-0.5 rounded border border-indigo-800">
+              ✓ Đề án 06/CP · Kho dữ liệu TP
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-[11.5px]">
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• CSDL Dân số 56 Xã/Phường</strong>
+              <p class="text-slate-400 mb-0">Cổng thông tin tổng hợp số liệu báo cáo dân số y tế tuyến cơ sở.</p>
+              <span class="text-[10px] text-indigo-400 font-medium block mt-1">Triển khai: Chi cục Dân số TP. Đà Nẵng</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• Trợ lý ảo Zalo Mini App</strong>
+              <p class="text-slate-400 mb-0">Giải đáp thủ tục hành chính công một cửa, gửi tin báo tiến độ qua Zalo OA.</p>
+              <span class="text-[10px] text-indigo-400 font-medium block mt-1">Triển khai: TT Phục vụ Hành chính công NHS</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• Camera AI Tổ dân phố thông minh</strong>
+              <p class="text-slate-400 mb-0">Giám sát an ninh trật tự, truyền dữ liệu về trung tâm điều hành phường xã.</p>
+              <span class="text-[10px] text-indigo-400 font-medium block mt-1">Triển khai: P. Điện Bàn Bắc, Xã Xuân Phú</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT 3: DOANH NGHIỆP & B2B -->
+        <div id="content-tab-doanhnghiep" class="hidden p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between text-xs pb-2 border-b border-slate-800">
+            <span class="font-bold text-amber-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span> Nền Tảng Cloud Enterprise & Tích Hợp Viễn Thông - Ngân Hàng
+            </span>
+            <span class="text-[10px] text-amber-300 font-mono bg-amber-950/60 px-2 py-0.5 rounded border border-amber-800">
+              ✓ NĐ 13/2023 · An toàn TT Cấp độ 3
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-[11.5px]">
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• Cổng Quản lý Google Cloud</strong>
+              <p class="text-slate-400 mb-0">Web Portal & Mobile App quản lý khách hàng Google Cloud Premier.</p>
+              <span class="text-[10px] text-amber-400 font-medium block mt-1">Triển khai: Công ty TNHH Cloud ACE</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• Thanh toán viện phí VietQR/Napas</strong>
+              <p class="text-slate-400 mb-0">Tích hợp thanh toán viện phí trực tuyến kết nối hệ thống bệnh viện qua Zalo OA.</p>
+              <span class="text-[10px] text-amber-400 font-medium block mt-1">Đối tác: Ngân hàng TMCP PVcomBank</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <strong class="text-slate-200 block mb-0.5">• Nền tảng Chuyển đổi số Viễn thông</strong>
+              <p class="text-slate-400 mb-0">Hệ thống chuyển đổi số phường xã và chatbot chăm sóc khách hàng viễn thông.</p>
+              <span class="text-[10px] text-amber-400 font-medium block mt-1">Triển khai: MobiFone Đà Nẵng</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-700/60 flex items-center justify-between text-[11px] text-slate-400">
+          <span>💡 <em>Khi gặp khách hàng phân khúc nào, người thuyết trình chỉ cần click vào Tab đó để trình diễn đúng năng lực thực tế.</em></span>
+          <span class="text-sky-400 font-mono">3 Domains × 22 Projects</span>
+        </div>
+      </div>
+
     </div>
 
     <!-- 2. STATS & METRICS -->
@@ -983,5 +1124,31 @@
     });
   </script>
 
+<script>
+    function switchHeroTab(tabId) {
+      const contents = ['content-tab-yte', 'content-tab-chinhquyen', 'content-tab-doanhnghiep'];
+      const buttons = ['btn-tab-yte', 'btn-tab-chinhquyen', 'btn-tab-doanhnghiep'];
+
+      contents.forEach(c => {
+        const el = document.getElementById(c);
+        if (el) el.classList.add('hidden');
+      });
+
+      buttons.forEach(b => {
+        const btn = document.getElementById(b);
+        if (btn) {
+          btn.className = "flex items-center gap-2 p-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-slate-400 hover:text-white font-medium text-xs text-left transition";
+        }
+      });
+
+      const activeContent = document.getElementById('content-' + tabId.replace('tab-', 'tab-'));
+      if (activeContent) activeContent.classList.remove('hidden');
+
+      const activeBtn = document.getElementById('btn-' + tabId.replace('tab-', 'tab-'));
+      if (activeBtn) {
+        activeBtn.className = "flex items-center gap-2 p-2.5 rounded-xl border border-sky-500 bg-sky-600/30 text-white font-bold text-xs text-left transition";
+      }
+    }
+</script>
 </body>
 </html>
